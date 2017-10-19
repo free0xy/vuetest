@@ -1,6 +1,10 @@
 #app {
-  width: 800px;
+  width: 500px;
   border: 1px solid #ccc;
-  position: relative; }
+  position: relative;
+  padding: 10px 0;
+  margin: 10px auto 0; }
+  #app input {
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */
