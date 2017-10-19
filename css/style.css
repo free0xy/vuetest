@@ -6,5 +6,7 @@
   margin: 10px auto 0; }
   #app input {
     display: block; }
+  #app .red {
+    color: #ff0000; }
 
 /*# sourceMappingURL=style.css.map */
