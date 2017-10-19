@@ -13,7 +13,12 @@
         <div class="hid" v-if="seen">是否能看见我</div>
         <p>填写所要的件数：</p>
         <input type="text" v-model="goodsNum" :placeholder="plh" >
-        <span class="red" v-if="isSeen">{{ tips }}</span>
+        <span :class="redObj" v-if="isSeen">{{ tips }}</span>
+        <div v-if="Math.random() > 0.5">now you see me</div>
+        <span v-else>now you don't</span>
+        <template v-if="5>3">
+            <h3>haha</h3>
+        </template>
     </div>
 
 <script src="js/vue.js" type="text/javascript"></script>

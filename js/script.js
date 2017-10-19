@@ -4,6 +4,9 @@ var dj = {
 var app = new Vue({
     el:'#app',
     data:{
+        redObj:{
+            'red':true
+        },
         tips:'不能超过最大值',
         isSeen:false,
         plh:'最大为'+dj.num,
