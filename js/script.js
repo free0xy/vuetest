@@ -1,9 +1,26 @@
 var dj = {
     num:929
 }
+
+Vue.component('licom',{
+    props:['titlex'],
+    template:'<li>{{ titlex.title }} 　 X</li>'
+})
 var app = new Vue({
     el:'#app',
     data:{
+        inputText:'',
+        nexttodoid:3,
+        todoList1:[
+            {id:0,title:'节点一'},
+            {id:1,title:'节点2'},
+            {id:2,title:'节点3'},
+        ],
+        items:[
+            {id:0,text:'第一'},
+            {id:1,text:'第2'},
+            {id:2,text:'第三'}
+        ],
         redObj:{
             'red':true
         },
@@ -34,6 +51,10 @@ var app = new Vue({
         }
     },
     methods:{
+        addNew:function () {
+            console.log(this.nexttodoid)
+            this.todoList1.push({id:this.nexttodoid++,title:this.inputText})
+        },
         goodsNumFn:function () {
             if(this.goodsNum > dj.num){
                 this.tips = "不能超过"
@@ -46,6 +67,7 @@ var app = new Vue({
         console.log('before')
     },
     created:function () {
+        this.items.push({id:3,text:'第四'})
         console.log(this.a)
     }
 });

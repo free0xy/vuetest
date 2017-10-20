@@ -19,6 +19,15 @@
         <template v-if="5>3">
             <h3>haha</h3>
         </template>
+
+        <ul>
+            <li v-for="(val,index) in items" :key="val.id">索引{{ index}} - {{ val.text }}</li>
+        </ul>
+
+        <input type="text" @keyup.enter="addNew" placeholder="edit" v-model="inputText">
+        <ul>
+            <licom v-for="val in todoList1" :key="val.id" :titlex="val" @remove="todoList1.splice(index,1)"></licom>
+        </ul>
     </div>
 
 <script src="js/vue.js" type="text/javascript"></script>
