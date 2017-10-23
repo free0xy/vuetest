@@ -28,8 +28,61 @@
         <ul>
             <licom v-for="val in todoList1" :key="val.id" :titlex="val" @remove="todoList1.splice(index,1)"></licom>
         </ul>
-    </div>
 
+        <button @click="sayhi('haha')">say hi</button>
+
+        <input type="checkbox" v-model="checke" :true-value="aaaa" :false-value="bbbb">
+        <span>checked:{{ checke }}</span>
+
+        <input type="checkbox"  value="jiamei" v-model="mcheck">
+        <span>加没</span>
+        <input type="checkbox" value="fenbu" v-model="mcheck">
+        <span>粉不</span>
+        <span>选择的是：{{ mcheck }}</span>
+
+        <input type="radio" value="nan"  v-model="radioh">
+        <span>男</span>
+        <input type="radio" value="lv" v-model="radioh">
+        <span>女</span>
+        <p>选择的是：{{ radioh }}</p>
+
+        <select v-model="sele">
+            <option>第一</option>
+            <option>第2</option>
+        </select>
+        <p>{{ sele }}</p>
+
+        <input type="text" placeholder="lazy测试" v-model="lazytest">
+        <p>LAZY显示：{{ lazytest }}</p>
+
+        <h1>组件</h1>
+        <div class="compo">
+            <my-com></my-com>
+            <my-com></my-com>
+        </div>
+
+        <xy-com mess="hello"></xy-com>
+
+        <input type="text" placeholder="edit" v-model="xycominput">
+        <xy-com1 :mess="xycominput"></xy-com1>
+
+        <h2>父子组件事件传递</h2>
+        <div class="outer">
+            <p>{{ total }}</p>
+            <son-com v-on:incre-out="incre"></son-com>
+            <son-com v-on:incre-out="incre"></son-com>
+            <button @click.native="dothis">原生提交</button>
+        </div>
+
+        <input-com v-model="price"></input-com>
+
+        <h2>插槽</h2>
+        <div class="fucom">
+            <h1>我是父组件</h1>
+            <zipro>
+            </zipro>
+        </div>
+    </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script>
     document.write('<link rel="stylesheet" href="css/style.css?now="'+Date.parse(new Date())+' type="text/css">')
