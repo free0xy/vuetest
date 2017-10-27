@@ -82,6 +82,14 @@
             <zipro>
             </zipro>
         </div>
+
+        <button @click="show = !show">点击</button>
+        <transition name="slide-fade">
+            <p v-if="show">虎虎</p>
+        </transition>
+        <transition name="bounce1">
+            <h3 v-if="show">弹跳</h3>
+        </transition>
     </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script>

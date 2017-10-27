@@ -67,6 +67,7 @@ Vue.component('son-com',{
 var app = new Vue({
     el:'#app',
     data:{
+        show:true,
         price:'',
         total:0,
         xycominput:'',
