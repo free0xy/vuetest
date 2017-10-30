@@ -1,3 +1,24 @@
+let obj= {
+    p:[
+        'hello',
+        {y:'world'}
+    ]
+}
+
+let { p,p:[x,{y}]} = obj;
+
+console.log(p)
+console.log(x)
+console.log(y)
+
+
+let newxy = (a,b) => {
+
+    return a+b;
+}
+console.log(newxy(2,3))
+
+
 var dj = {
     num:929
 }
